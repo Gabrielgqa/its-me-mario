@@ -20,7 +20,17 @@ var distribuirPontos = function (name){
     else
         person.Resist = Math.ceil(Math.random() * limite1);
 
+    CreateCharacter(person);
     return person;
+}
+
+
+var CreateCharacter = function(person){
+    var card = document.querySelector('.card');
+        node = document.createElement('div');
+        text = document.createTextNode('Nome: '+person.Name+'; Forca: '+person.Force+'; Armadura: '+person.Armor+'; Resistencia: '+person.Resist);      
+        card.appendChild(node);
+        node.appendChild(text);
 }
 
 person1 = distribuirPontos('Caio');
@@ -50,4 +60,4 @@ var luta = function(person1, person2) {
     }
 }
 
-luta(person1, person2); 
+luta(person1, person2);
