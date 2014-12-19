@@ -50,4 +50,4 @@ var luta = function(person1, person2) {
     }
 }
 
-luta(person1, person2);
+luta(person1, person2); 
