@@ -1,8 +1,23 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
+    <meta charset="utf-8">
+    <head>
+        <title>Age of Empires 6</title>
+    </head>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <body>
-        <div class="card"></div>
+        <form id="form-criar" action="new.html" method="get">
+            <input id="idname" type="text" name="ipt-name" placeholder="Nome"><p></p>
+            <input id="idforce" type="text" name="ipt-force" placeholder="Força"><p class="error-force"></p>
+            <input id="idarmor" type="text" name="ipt-armor" placeholder="Armadura"><p class="error-armor"></p>
+            <input id="idresist" type="text" name="ipt-resist" placeholder="Resistência"><p class="error-resist"></p>
+            <input type="submit" value="Criar">
+            <p class="error-limit"></p>
+        </form>
+        <br>
+        <div class="card">
+        <button class="btn-attack">Attack</button>
+        </div>
         <script src="script.js"></script>
     </body>
 </html>
