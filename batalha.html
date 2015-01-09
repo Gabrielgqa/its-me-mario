@@ -8,7 +8,7 @@
         <link href='http://fonts.googleapis.com/css?family=MedievalSharp' rel='stylesheet' type='text/css'>
     </head>
     <body>
-        <embed src="music/Musica Medieval Celta.mp3" autostart="true" height="0px" weight="0px" LOOP=True></embed>
+        <audio src="music/Musica Medieval Celta.mp3" autoplay loop></audio>
         <div class="container">
             <div class="col-md-12 cenario">
                 <div class="container">
@@ -36,7 +36,8 @@
                 <div class="lbl">Comandos</div>
                 <div class="cmd">
                     <div class="cmd-col">
-                        <button class="btn-atacar" title="Atacar"><img src="images/atacar.png" height="32" width="32"></button>
+                        <audio id="audioAtacar" src="music/espada.mp3" preload></audio>
+                        <button class="btn-atacar" title="Atacar"><img src="images/atacar.png" height="32" width="32" onClick="Atacar('audioAtacar')"></button>
                     </div>
                     <div class="cmd-col">
                         <button class="btn-defender" title="Defender"><img src="images/defender.png" height="32" width="32"></button>
@@ -50,5 +51,7 @@
                 <div class="lbl">Inimigos</div>
             </div>
         </div>
+
+        <script src="efeitos.js"></script>
     </body>
 </html>
