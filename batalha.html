@@ -10,12 +10,40 @@
     <body>
         <audio src="music/Musica Medieval Celta.mp3" autoplay loop></audio>
         <div class="container">
+            <div class="iniciar">
+                <a href="#abrirModal"><button class="btn-iniciar">Iniciar</button></a>
+                    <div id="abrirModal" class="modalDialog">
+                        <div class="modal-janela">
+                            <h3>Criar Personagem</h3>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon"></div>
+                                    <input id="idforca" type="number" min="0" max="5" name="forca" class="form-control" placeholder="Força"/><br/>
+                                    <div class="input-group-addon"></div>
+                                    <input id="idarmadura" type="number" min="0" max="5" name="armadura" class="form-control" placeholder="Armadura"/><br/>
+                                    <div class="input-group-addon"></div>
+                                    <input id="idresistencia" type="number" min="0" max="5" name="resistencia" class="form-control" placeholder="Resistencia"/><br/>
+                                 </div>
+                                 <div class="form-group">
+                                    <div class="criar-pers">
+                                        <a href="#close"><button class="btn-criar" onclick="CriarPersonagem()">Criar</button></a>
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="container">
             <div class="col-md-12 cenario">
                 <div class="container">
                     <div class="espaco-cenario"></div>
                     <div class="espaco-mario">
                         <div class="img-mario">
                             <img src="images/mario.png" height="70" width="70">
+                        </div>
+                        <div class="img-golen">
+                            <img src="images/golen.gif" height="70" width="70">
                         </div>
                     </div>
                 </div>
@@ -26,9 +54,9 @@
                 <div class="lbl-pers">Mario Warrior</div>
                 <div class="att-pers">
                     <dl>
-                        <dd>Força: </dd>
-                        <dd>Armadura: </dd>
-                        <dd>Resistência: </dd>
+                        <dd>Força: <label class="vlforca"></label> </dd>
+                        <dd>Armadura: <label class="vlarmadura"></label> </dd>
+                        <dd>Resistência: <label class="vlresistencia"></label> </dd>
                     </dl>
                 </div>
             </div>
@@ -51,7 +79,6 @@
                 <div class="lbl">Inimigos</div>
             </div>
         </div>
-
-        <script src="efeitos.js"></script>
+        <script type="text/javascript" src="efeitos.js"></script>
     </body>
 </html>
