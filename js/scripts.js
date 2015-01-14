@@ -1,6 +1,8 @@
 function Atacar(id_audio) {
+    document.getElementById("img-m").src = "../img/characters/Mario/mario-atacar.png";
     var arquivo = document.getElementById(id_audio);
     arquivo.play();
+    setTimeout(function() {document.getElementById("img-m").src = "../img/characters/Mario/mario-inicio.png";},1000);
 }
 
 function CriarPersonagem() {
