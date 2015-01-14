@@ -37,29 +37,39 @@
         <div class="container">
             <div class="col-md-12 cenario">
                 <div class="container">
-                    <div class="espaco-cenario"></div>
+                    <div class="espaco-cenario">
+                        <div class="espaco-resultado"></div>
+                        <div class="espaco-status">
+                            <div class="status-personagem">
+                                <div class="stsp-txt">
+                                    <p>ERROU</p>
+                                </div>
+                            </div>
+                            <div class="status-inimigo"></div>
+                        </div>
+                    </div>
                     <div class="espaco-mario">
                         <div class="img-mario">
                             <img id="img-m" src="img/characters/Mario/mario-inicio.png">
                         </div>
-                        <div class="img-golen">
-                            <img src="img/golen.gif" height="70" width="70">
+                        <div class="img-inimigo">
+                            <img id="img-i">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="container">
-            <div class="col-md-5 cx-personagem">
+            <div class="col-md-4 cx-personagem">
                 <div class="lbl-pers">Mario Warrior</div>
-                <div class="att-pers">
+                <div class="atributos">
                     <dl>
                         <dd>Força: <label class="vlforca"></label> </dd>
                         <dd>Armadura: <label class="vlarmadura"></label> </dd>
                         <dd>Resistência: <label class="vlresistencia"></label> </dd>
                     </dl>
                 </div>
-                <div class="brr-vida">
+                <div class="att-vida">
                     <label class="vlvida"></label>
                 </div>
             </div>
@@ -68,7 +78,7 @@
                 <div class="cmd">
                     <div class="cmd-col">
                         <audio id="audioAtacar" src="music/espada.mp3" preload></audio>
-                        <button class="btn-atacar" title="Atacar" onClick="Atacar('audioAtacar')"><img src="img/icons/atacar.png" height="32" width="32"></button>
+                        <button id="bt-atacar" class="btn-atacar" title="Atacar" onClick="Atacar('audioAtacar')"><img src="img/icons/atacar.png" height="32" width="32"></button>
                     </div>
                     <div class="cmd-col">
                         <button class="btn-defender" title="Defender"><img src="img/icons/defender.png" height="32" width="32"></button>
@@ -78,8 +88,18 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 cx-inimigos">
+            <div class="col-md-4 cx-inimigos">
                 <div class="lbl">Inimigos</div>
+                <div class="atributos">
+                    <dl>
+                        <dd>Força: <label class="vlforca-inimigo"></label> </dd>
+                        <dd>Armadura: <label class="vlarmadura-inimigo"></label> </dd>
+                        <dd>Resistência: <label class="vlresistencia-inimigo"></label> </dd>
+                    </dl>
+                </div>
+                <div class="att-vida">
+                    <label class="vlvida-inimigo"></label>
+                </div>
             </div>
         </div>
         <script type="text/javascript" src="js/scripts.js"></script>

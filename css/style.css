@@ -30,6 +30,38 @@ body {
 		width: 94%;
 		height: 250px;
 	}
+		.espaco-resultado {
+			width: 100%;
+			height: 180px;
+		}
+		.espaco-status {
+			width: 100%;
+			height: 70px;
+		}
+			.status-personagem {
+				width: 50%;
+				height: 70px;
+				float: left;
+			}
+				.stsp-txt {
+					padding-top: 3%;
+					margin: 0 auto;
+					width: 20%;
+					height: 30px;
+					display: none;
+				}
+					.stsp-txt p{
+						color: red;
+						font-size: 1.5em;
+						font-weight: bold;
+						font-family: 'MedievalSharp', cursive;
+						padding-left: 270px;
+					}
+			.status-inimigo {
+				width: 50%;
+				height: 70px;
+				float: left;
+			}
 	.espaco-mario {
 		width: 94%;
 		height: 166px;
@@ -40,9 +72,10 @@ body {
 			padding-left: 250px;
 			float: left;
 		}
-		.img-golen {
-			width: 20%;
+		.img-inimigo {
+			width: 40%;
 			height: 116px;
+			padding-right: 250px;
 			float: right;
 		}
 	.cx-personagem {
@@ -85,7 +118,7 @@ body {
 			font-family: 'MedievalSharp', cursive;
 			letter-spacing: 2px;
 		}
-		.att-pers {
+		.atributos {
 			width: 50%;
 			height: 35%;
 			color: white;
@@ -94,7 +127,7 @@ body {
 			padding-left: 5%;
 			float: left;
 		}
-		.brr-vida {
+		.att-vida {
 			width: 40%;
 			height: 30%;
 			color: white;
@@ -216,5 +249,5 @@ body {
 
 	#img-m {
 		width: 90px;
-		height: 128px;
+		height: 111px;
 	}
