@@ -20,7 +20,9 @@ function AtributosPersonagem(personagem) {
 	var vlf = document.querySelector('.vlforca');
     var vla = document.querySelector('.vlarmadura');
     var vlr = document.querySelector('.vlresistencia');
+    var vlv = document.querySelector('.vlvida');
     vlf.innerHTML = personagem.Forca;
     vla.innerHTML = personagem.Armadura;
     vlr.innerHTML = personagem.Resistencia;
+    vlv.innerHTML = 'HP: 50/'+personagem.Vida;
 }
