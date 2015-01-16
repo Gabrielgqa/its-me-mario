@@ -1,3 +1,4 @@
+// -- variávei globais
 var experiencia = 1;
 var personagem = {Forca: 0, Armadura: 0, Resistencia: 0, Vida: 0};
 var inimigo = {Forca: 0, Armadura: 0, Resistencia: 0, Vida: 0};
@@ -49,16 +50,15 @@ function AtributosInimigo(inimigo) {
 }
 
 function Atacar(id_audio) {
-    //ANIMAÇÃO ATAQUE
     document.getElementById("img-m").src = "../img/characters/Mario/mario-atacar.png";
     setTimeout(function() {document.getElementById("img-m").src = "../img/characters/Mario/mario-inicio.png";},1000);
-    //SOM ATAQUE
+    
     var arquivo = document.getElementById(id_audio);
     arquivo.play();
-    //ANIMAÇÃO DANO
+    
     document.getElementById("img-i").style.display = "none";
     setTimeout(function() {document.getElementById("img-i").style.display = "inline";},300);
-    //DANO ATAQUE
+    
     var dano = personagem.Forca*Math.ceil(Math.random()*6) - inimigo.Armadura*Math.ceil(Math.random()*6);
     if (dano > 0)
         inimigo.Vida -= dano;
@@ -67,7 +67,6 @@ function Atacar(id_audio) {
 }
 
 function ContraAtaque() {
-    //ANIMAÇÃO DANO
     document.getElementById("img-m").style.display = "none";
     setTimeout(function() {document.getElementById("img-m").style.display = "inline";},300);
     var dano = inimigo.Forca*Math.ceil(Math.random()*6) - personagem.Armadura*Math.ceil(Math.random()*6);
@@ -75,11 +74,37 @@ function ContraAtaque() {
         personagem.Vida -= dano;
     else
         StatusPersonagem();
-    AtributosPersonagem(personagem);
+    if (personagem.Vida <= 0) {
+        personagem.Vida = 0;
+        AtributosPersonagem(personagem);
+        VerificaVencedor();
+    }
+    else
+        AtributosPersonagem(personagem);
 }
 
 function StatusPersonagem() {
     erro = document.querySelector('.stsp-txt');
     erro.style.display = "inline";
     setTimeout(function() {erro.style.display = "none";},800);
+}
+
+function VerificaVencedor() {
+    if (personagem.Vida == 0)
+        FimDeJogo();
+    if (inimigo.Vida == 0)
+        RecompensasVitoria();
+}
+
+function RecompensasVitoria() {
+    fim = document.querySelector('.resultado');
+    txtfim = '<label>Vitória</label>';
+    fim.innerHTML = txtfim;
+    experiencia++;
+}
+
+function FimDeJogo() {
+    fim = document.querySelector('.resultado');
+    txtfim = '<p>Fim de Jogo</p>';
+    fim.innerHTML = txtfim;
 }
